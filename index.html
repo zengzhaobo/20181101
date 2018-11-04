@@ -2,8 +2,23 @@
 <html>
 <head>
 <title>我的第一个页面</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.5.1/marked.min.js"></script>
 </head>
 <body>
  这是内容
 </body>
+ <script>
+ var markdown = `
+# 小六叶的博客
+**小六叶**
+> 门前有种着两棵树，一棵是苹果树，另一棵也是苹果树----鲁迅（没有说过）
+
+今天学习 Markdown 了。
+
+![](http://p0.so.qhmsg.com/bdr/_240_/t01d3bfeed2e9407fcf.jpg)
+`;
+    var html = marked(markdown);
+    console.log(html);
+    document.getElementById('content').innerHTML =html;
+ </script>
 </html>
